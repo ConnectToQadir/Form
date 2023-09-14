@@ -10,6 +10,10 @@ app.use('/api/students',require('./routes/students'))
 
 
 
+app.get("/api/public",(req,res)=>{
+    res.send("hi ther")
+})
+
 
 
 mongoose.connect("mongodb+srv://qadir:qadir@edify.0i5koc5.mongodb.net/form?retryWrites=true&w=majority").then(()=>{
