@@ -4,6 +4,7 @@ const app = express()
 
 
 
+app.set('view engine','ejs')
 app.use(express.static("public"))
 
 app.use('/api/students',require('./routes/students'))
@@ -11,7 +12,7 @@ app.use('/api/students',require('./routes/students'))
 
 
 app.get("/api/public",(req,res)=>{
-    res.send("hi ther")
+    res.render("some")
 })
 
 
