@@ -16,9 +16,12 @@ app.get("/api/public", (req, res) => {
 })
 
 app.get('/', function (req, res) {
-    res.render(__dirname + '/views/some');
+    res.render(__dirname + '/views/some.ejs');
 });
 
+app.get('/about', function (req, res) {
+    res.render(__dirname + '/views/about.ejs');
+});
 
 mongoose.connect("mongodb+srv://qadir:qadir@edify.0i5koc5.mongodb.net/form?retryWrites=true&w=majority").then(() => {
     console.log("Connected!")
